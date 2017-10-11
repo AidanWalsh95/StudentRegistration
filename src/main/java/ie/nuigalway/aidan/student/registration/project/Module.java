@@ -24,9 +24,7 @@ public class Module {
         }
     
     public boolean addStudent(Student student) {
-        
-        return this.moduleStudents.add(student);
-    
+        return this.moduleStudents.add(student);    
     }
     
     

@@ -15,14 +15,16 @@ import java.util.ArrayList;
 public class CourseProgramme {
     
     private String courseName;
+    private String courseCode;
     private LocalDate startDate;
     private LocalDate endDate;
     private ArrayList<Module> moduleList;
     
-    public CourseProgramme(String cName, LocalDate sDate, LocalDate eDate) {
+    public CourseProgramme(String cName, String cCode, String sDate, String eDate) {
 		this.courseName = cName;
-                this.startDate = sDate;
-		this.endDate = eDate;
+                this.courseCode = cCode;
+                this.startDate = LocalDate.parse(sDate);
+		this.endDate = LocalDate.parse(eDate);
                 this.moduleList = new ArrayList<Module>();
         }
     
