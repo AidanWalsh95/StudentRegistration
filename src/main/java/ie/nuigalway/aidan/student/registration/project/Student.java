@@ -37,12 +37,8 @@ public class Student {
                 return this.username;
 	}
         
-        public String getFName() {
-            return fName;
-        }
-        
-        public String getSName() {
-            return sName;
+        public String getStudentName() {
+            return fName + " " + sName;
         }
         
         public int getAge() {
