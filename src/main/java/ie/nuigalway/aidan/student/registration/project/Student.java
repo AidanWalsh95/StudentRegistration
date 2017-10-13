@@ -56,10 +56,6 @@ public class Student {
         return studentModules;
         }
 
-        public void setSModules(ArrayList<Module> sModules) {
-        this.studentModules = sModules;
-        }
-
         public void addSModule(Module sModule) {
         this.studentModules.add(0, sModule);
         }

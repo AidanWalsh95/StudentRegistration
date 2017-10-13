@@ -37,10 +37,6 @@ public class Module {
         return moduleStudents;
     }
     
-    public void setModuleStudents(ArrayList<Student> mStudents) {
-        this.moduleStudents = mStudents;
-    }
-    
     public String getModuleName() {
         return moduleName;
     }
