@@ -13,18 +13,40 @@ import java.util.ArrayList;
  */
 public class Module {
     
-    private String name;
+    private String moduleName;
     private String moduleID;
     private ArrayList<Student> moduleStudents;
     
     public Module(String mName, String mID) {
-		this.name = mName;
+		this.moduleName = mName;
 		this.moduleID = mID;
                 this.moduleStudents = new ArrayList<Student>();
         }
     
-    public boolean addStudent(Student student) {
-        return this.moduleStudents.add(student);    
+    public void addStudent(Student s) {
+        this.moduleStudents.add(s);
+        s.addSModule(this);
+    }
+    
+    public void removeStudent(Student s) {
+        int i = this.moduleStudents.indexOf(s);
+        this.moduleStudents.remove(i);
+    }
+    
+    public ArrayList<Student> getModuleStudents() {
+        return moduleStudents;
+    }
+    
+    public void setModuleStudents(ArrayList<Student> mStudents) {
+        this.moduleStudents = mStudents;
+    }
+    
+    public String getModuleName() {
+        return moduleName;
+    }
+    
+    public String getModuleID() {
+        return moduleID;
     }
     
     

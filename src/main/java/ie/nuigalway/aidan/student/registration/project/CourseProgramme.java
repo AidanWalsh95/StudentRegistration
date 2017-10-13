@@ -28,10 +28,36 @@ public class CourseProgramme {
                 this.moduleList = new ArrayList<Module>();
         }
     
-    public boolean addModule(Module module) {
+    public void addModule(Module m) {
+        this.moduleList.add(m);
         
-        return this.moduleList.add(module);
-    
+        for (Student s : m.getModuleStudents()) {
+           s.setStudentCourse(this);
+        }
     }
     
+    public void removeModule(Module m) {
+        int i = this.moduleList.indexOf(m);
+        this.moduleList.remove(i);
+    }
+    
+    public void setModules(ArrayList mods) {
+        this.moduleList = mods;
+    }
+    
+    public LocalDate getSDate() {
+       return startDate;
+    }
+   
+    public LocalDate getEDate() {
+       return endDate;
+    }
+    
+    public String getCourseName() {
+        return courseName;
+    }
+    
+    public ArrayList<Module> getModuleList() {
+        return moduleList;
+    }
 }
